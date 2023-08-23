@@ -1,0 +1,390 @@
+html {
+  scroll-behavior: smooth;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* By default, hide the menu on small screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar ul.active {
+    display: block;
+  }
+}
+
+/* General Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #134d7c, #7a7db0);
+  background-size: 200% 200%;
+  animation: gradientShift 15s infinite;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-right: 20px;
+  transition: transform 0.6s ease-in-out; /* Add this line for smooth transition */
+}
+@keyframes waveEffect {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo:hover {
+  animation: waveEffect 0.6s ease-in-out;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 25px; /* Adjusted space between links */
+}
+
+.navbar li {
+  position: relative;
+}
+a {
+  color: #fff !important;
+}
+.navbar a {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #e0e0e0;
+}
+
+.navbar .active a {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  background: #e0e0e0;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* Products, Enquiry, Location, Contact Sections */
+.products,
+.enquiry,
+.location,
+.contact {
+  padding: 50px 5%;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+.enquiry p {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 170px;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 130px;
+  }
+}
+/* ... Your previous CSS ... */
+
+/* General Theme Colors */
+body {
+  background-color: #dfe6ea; /* Changed the body background color */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #134d7c; /* Used the strong blue for the header */
+  color: #dfe6ea; /* Changed the text color to contrast with the header */
+}
+
+.logo {
+  color: #eccddd; /* Used the pale pinkish for the logo text */
+}
+
+.navbar a {
+  color: #dfe6ea; /* Changed the navbar link color for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for color */
+}
+
+.navbar a:hover {
+  background-color: #7a7db0; /* Used the muted purple for hover */
+  color: #134d7c; /* Changed text color on hover for better contrast */
+}
+
+.navbar .active a {
+  color: #eccddd; /* Changed the active link color */
+  border-bottom: 2px solid #eccddd; /* Modified the active link border color */
+}
+
+/* Hero Section */
+.hero {
+  background: #7a7db0; /* Used the muted purple for the hero section */
+  color: #dfe6ea; /* Changed the hero text color for better contrast */
+}
+
+/* Footer */
+footer {
+  background-color: #134d7c; /* Used the strong blue for the footer */
+  color: #dfe6ea; /* Changed the footer text color for contrast */
+}
+
+/* ... Continue with your other CSS ... */
+
+/* ... Your existing CSS ... */
+
+.navbar li a {
+  position: relative; /* Make this relative so that the ::before pseudo-element can be positioned relative to this */
+  font-size: 16px; /* Base font size, adjust as needed */
+  transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+.navbar li a:hover {
+  font-size: 18px; /* Increased font size on hover, adjust as needed */
+  color: #eccddd; /* Highlight text color on hover, adjust if needed */
+}
+
+/* Underline Animation */
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eccddd; /* Adjust this to match your desired underline color */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* ... Continue with your other CSS ... */
+/* ... Your existing CSS ... */
+
+/* Blur Effect */
+.navbar ul:hover li a:not(:hover) {
+  filter: blur(
+    2px
+  ); /* Apply blur to non-hovered links when hovering over the navbar */
+  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eccddd;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* ... Continue with your other CSS ... */
+
+/* ... Your other CSS code ... */
+
+/* Hero Section */
+
+.hero {
+  /* background-image: url("images/multi-color-fabric-texture-samples.jpg"); */
+  background-image: url("images/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 100px 0;
+  color: #134d7c;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  color: #134d7c;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a soft shadow with a slight offset */
+  -webkit-text-stroke: 0.1px #131010; /* Gives a stroke of 1px with the muted purple color */
+}
+.hero p {
+  font-size: 1.5rem; /* Adjust the font size as per your requirement */
+  font-family: "Playfair Display", serif; /* Keep the consistency with the header font */
+  color: #000000;
+  z-index: 1;
+  position: relative;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* A slightly softer shadow for smaller text */
+  -webkit-text-stroke: 0.5px #131010; /* A thinner stroke for smaller text */
+  margin: 0 auto; /* Centering the text if the hero is a flex container */
+  max-width: 800px; /* Limiting the width to make reading easier */
+  line-height: 1.4; /* Giving a little space between the lines for better readability */
+  padding-top: 20px; /* Spacing from the header */
+}
+
+.hero-content {
+  font-size: 1.25rem;
+  font-weight: 500;
+  z-index: 1; /* Above the pseudo-element for visibility */
+  position: relative; /* To respect z-index */
+  max-width: 80%; /* Restrict width for better readability on wider screens */
+}
+
+/* Keep the existing code for larger screens */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 0; /* Reduce padding for smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Decrease font size for headings on smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 1.5rem; /* Decrease font size for paragraphs on smaller screens */
+    padding-top: 10px; /* Reduce padding between header and text */
+  }
+
+  .hero-content {
+    font-size: 1rem; /* Decrease font size for content on smaller screens */
+  }
+}
+
+/* ... Continue with your other CSS ... */
+.hero,
+.contact {
+  padding: 50px 0;
+}

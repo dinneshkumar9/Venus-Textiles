@@ -1,0 +1,112 @@
+.contact {
+  background-color: #dfe6ea;
+  padding: 50px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px; /* spacing between child elements */
+}
+
+.contact h2 {
+  color: #134d7c;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  width: 100%; /* make it span the entire width of the parent */
+  text-align: center;
+}
+
+.contact-details,
+.contact-form {
+  flex: 1; /* equally divide the space */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff; /* white background for a card-like appearance */
+}
+
+.contact-details p,
+.contact-form h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.contact-details i.material-icons {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.5rem; /* Slightly larger icons */
+  color: #134d7c; /* Color of the icons to make them prominent */
+}
+
+.contact-details span {
+  margin-left: 10px; /* Space after the icon */
+  text-align: start;
+}
+.contact-form {
+  text-align: left;
+}
+
+#contactForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #134d7c;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #7a7db0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s; /* transitions for a smoother effect */
+}
+#contactForm textarea {
+  height: 100px; /* Fixed height for the textarea */
+  resize: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #134d7c;
+  box-shadow: 0 0 10px rgba(19, 77, 124, 0.25); /* focus shadow */
+}
+
+#contactForm button {
+  background-color: #134d7c;
+  color: #dfe6ea;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* full pill-like button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* added transform transition */
+}
+
+#contactForm button:hover {
+  background-color: #7a7db0;
+  transform: translateY(-3px); /* slight upward lift */
+}
+
+#contactForm button:active {
+  transform: translateY(1px); /* press down effect */
+}
+.form-error {
+  color: red;
+  font-size: 0.8rem;
+  height: 20px; /* This ensures consistent spacing even if no error is shown */
+  display: block;
+  margin-bottom: 15px;
+}

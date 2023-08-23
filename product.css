@@ -1,0 +1,343 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Animation for Gradient Background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .products {
+    min-height: auto;
+  }
+}
+/* product.css */
+
+@media (max-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .product-container {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping of product cards */
+  }
+
+  .product-card {
+    flex: 0 0 auto; /* Prevents flex items from shrinking */
+    margin-right: 20px; /* Spacing between cards */
+  }
+}
+/* product.css */
+
+@media (max-width: 768px) {
+  .product-container::-webkit-scrollbar {
+    display: none; /* Chrome and Safari */
+  }
+  .product-container {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* Product Section Styles */
+.products {
+  height: 100vh; /* Makes the products section take up the full viewport height */
+  overflow: hidden;
+  padding: 50px 5%;
+  background-color: #eccddd;
+  display: flex;
+  align-items: center; /* vertically center the content */
+  justify-content: center; /* horizontally center the content */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(
+    45deg,
+    #eccddd,
+    #63137c4d,
+    #7a7db0
+  ); /* Adjust the colors as needed */
+  animation: gradientShift 15s infinite;
+}
+.product-container {
+  height: 100%; /* Take up the full height of its parent */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust alignment as per preference */
+  align-items: center; /* Center the product cards vertically */
+}
+
+.product-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  width: calc(33.33% - 20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #134d7c;
+}
+
+.product-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.product-button {
+  background-color: #134d7c;
+  color: #dfe6ea;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  font-weight: 500; /* A bit of font weight for a bolder look */
+}
+
+.product-button:hover {
+  background-color: #7a7db0;
+  color: #134d7c;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dfe6ea;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 2px solid #134d7c;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2); /* Adds depth to your modal */
+  background: linear-gradient(145deg, #eccddd, #dfe6ea);
+  border-radius: 10px;
+}
+
+.close-btn {
+  color: #134d7c;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.close-btn:hover {
+  color: #7a7db0;
+}
+
+#enquiryModal h2 {
+  /* ... existing styles ... */
+  padding: 0 0 10px 0; /* Adding padding at the bottom */
+}
+
+form label {
+  color: #134d7c;
+  margin-bottom: 5px;
+  padding-right: 5px; /* Adding padding to the right of the label */
+}
+
+form input,
+form textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #134d7c;
+  background-color: #dfe6ea;
+  border-radius: 5px;
+  transition: border 0.3s, background-color 0.3s;
+  font-size: 0.95rem; /* Adjusting the font size for comfort */
+  padding: 12px 15px; /* Adjusting padding for better vertical spacing */
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #eccddd;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(19, 77, 124, 0.5); /* Add a subtle shadow when the input is focused */
+}
+
+form input[type="submit"] {
+  background-color: #7a7db0;
+  color: #dfe6ea;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  font-weight: 500; /* A bit of font weight for a bolder look */
+}
+
+form input[type="submit"]:hover {
+  background-color: #eccddd;
+  color: #134d7c;
+}
+
+.error-message {
+  display: none;
+  border: 2px solid #134d7c;
+  padding: 10px;
+  background-color: #eccddd;
+  color: #134d7c;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.error-message p {
+  font-weight: bold;
+}
+
+.error-message ul {
+  margin-bottom: 10px;
+  padding-left: 20px; /* Adding padding to the list */
+}
+
+.error-message button,
+.error-message .contact-btn {
+  background-color: #7a7db0;
+  color: #dfe6ea;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.error-message button:hover,
+.error-message .contact-btn:hover {
+  background-color: #134d7c;
+}
+#question {
+  resize: none;
+}
+
+/* Styling for Contact Us Section */
+.contact {
+  background-color: #dfe6ea;
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #134d7c;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-bottom: 30px;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  color: #134d7c;
+  margin-bottom: 20px;
+}
+
+#contactForm label {
+  display: block;
+  margin-bottom: 5px;
+  color: #134d7c;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #7a7db0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+#contactForm button {
+  background-color: #134d7c;
+  color: #dfe6ea;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+  background-color: #7a7db0;
+}

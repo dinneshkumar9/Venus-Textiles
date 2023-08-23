@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venus Textiles</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="shortcut icon" href="favicon\favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="favicon\android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon\android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon\apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon\favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon\favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon\site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <img src="images/Vtlogo.png" alt="VT Logo" class="logo" />
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="#enquire" class="nav-enquire">Enquire</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Where Tradition Meets Modern Design</h1>
+        <p>
+          Our collection blends timeless techniques with contemporary designs,
+          ensuring each fabric tells a story.
+        </p>
+      </div>
+    </section>
+
+    <section id="product" class="products">
+      <div class="product-container">
+        <div class="product-card">
+          <img
+            src="images/multi-color-fabric-texture-samples.jpg"
+            alt="Product Image 1"
+            class="product-image"
+          />
+          <div class="product-details">
+            <h3 class="product-title">Dyed Cotton Fabric</h3>
+            <p class="product-description">
+              Dyed cotton fabric is available in a wide range of colors and
+              patterns, so you can find the perfect fabric for your needs.
+            </p>
+            <button class="product-button enquiry-button">Enquiry</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images\Bed-linen.jpg"
+            alt="Bed-linen"
+            class="product-image"
+          />
+          <div class="product-details">
+            <h3 class="product-title">Bed Linen Fabric</h3>
+            <p class="product-description">
+              Versatile linen fabric that can be used for a variety of bedding
+              and home décor items, giving your bedroom a stylish and
+              sophisticated look.
+            </p>
+            <button class="product-button enquiry-button">Enquiry</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="images\greige-fabric.jpg"
+            alt="greige-fabric"
+            class="product-image"
+          />
+          <div class="product-details">
+            <h3 class="product-title">Greige Fabric</h3>
+            <p class="product-description">
+              Raw greige fabric with a natural, off-white color that is perfect
+              for custom projects.High-quality fabric that is made from
+              sustainable materials.
+            </p>
+            <button class="product-button enquiry-button">Enquiry</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat .product-card for other products -->
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-details">
+        <p>
+          If you have any enquiries or need assistance, feel free to contact us:
+        </p>
+        <ul>
+          <li>
+            <i class="material-icons">email</i>
+            <span>info@venustextiles.in</span>
+          </li>
+          <li>
+            <i class="material-icons">call</i>
+            <span> +91 93641 00908</span>
+          </li>
+          <li>
+            <i class="material-icons">location_city</i>
+            <span>No. 3 Vakilswamy street Erode, Tamil Nadu 638001 India</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/myyqwjqy"
+          method="post"
+        >
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="contactName" required />
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="contactEmail" required />
+          <label for="contactMessage">Message</label>
+          <textarea
+            id="contactMessage"
+            name="contactMessage"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Thank you visiting, Venus Textiles. All rights reserved. Made by Dinesh
+        Kumar
+      </p>
+    </footer>
+    <div id="enquiryModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Product Enquiry</h2>
+        <form
+          id="enquiryForm"
+          action="https://formspree.io/f/myyqwjqy"
+          method="post"
+        >
+          <div class="error-message" id="error-message">
+            <p>Please ensure all details are correct:</p>
+            <ul>
+              <li>Name: Only alphabets and up to 20 characters.</li>
+              <li>Email: Only Emails</li>
+              <li>Phone: Only numbers.</li>
+              <li>Your Question: Up to 100 words.</li>
+            </ul>
+            <button id="tryAgainBtn">Try Again</button>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+          </div>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone</label>
+          <input type="number" id="phone" name="phone" />
+
+          <label for="question">Your Question</label>
+          <textarea id="question" name="question" required></textarea>
+
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="validation.js"></script>
+  </body>
+</html>
